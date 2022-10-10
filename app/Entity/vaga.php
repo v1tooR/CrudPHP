@@ -63,5 +63,12 @@
         public static function getvagas($where = null, $order = null, $limit = null){
             return (new Database('vagas'))->select($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
         }
-       
+       /**
+        * Buscar vaga
+        *@param integer $id
+        *@return Vaga
+        */
+        public static function getVaga($id){
+            return (new Database('vagas'))->select('id = '.$id);
+        }
     }
