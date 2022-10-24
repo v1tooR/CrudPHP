@@ -17,7 +17,7 @@
         $obVaga->cadastrar();
         //echo "<pre>"; print_r($obVaga); echo "</pre>"; exit;
 
-        header('location: index.php?status=success');
+        header('location: site.php?status=success');
         exit;
     }
 

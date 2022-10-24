@@ -6,12 +6,14 @@
     use \App\Entity\Vaga;
 
     if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
-        header('location: index.php?status=error');
+        header('location: site.php?status=error');
         exit;
     }
 
     $obVaga = Vaga::getVaga($_GET['id']);
     echo "<pre>"; print_r($obVaga); echo "</pre>"; exit;
+
+    
 
     //validação
     if(isset($_POST['titulo'],$_POST['descricao'],$_POST['ativo'])){
